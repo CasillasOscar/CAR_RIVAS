@@ -12,13 +12,13 @@ const socialLinks = [
 ---
 
 <header class="fixed top-0 left-0 right-0 w-full z-50 bg-black backdrop-blur-md border-b border-white/5">
-  <div class="max-w-350 2xl:max-w-screen-2xl mx-auto px-6 h-20 lg:h-24 2xl:h-32 flex items-center justify-between relative">
+  <div class="max-w-350 2xl:max-w-screen-2xl mx-auto px-6 h-20 lg:h-14 2xl:h-32 flex items-center justify-between relative">
     
     <a href="/" class="flex items-center gap-4 group shrink-0">
       <div 
-        class="w-13 h-13 2xl:w-16 2xl:h-16 rounded-xl flex items-center justify-center transition-transform group-hover:scale-105 bg-(--brand-green)" 
+        class="w-10 h-10 lg:w-10 lg:h-10 2xl:w-16 2xl:h-16 rounded-xl flex items-center justify-center transition-transform group-hover:scale-105 bg-(--brand-green)" 
       >
-       <img src={logo.src} alt="Logo CAR RIVAS" class="w-11 h-11 2xl:w-14 2xl:h-14"/>
+       <img src={logo.src} alt="Logo CAR RIVAS" class="w-8 h-8 lg:w-8 lg:h-8 2xl:w-14 2xl:h-14"/>
       </div>
       <!-- <span class="text-white font-black text-xl 2xl:text-2xl uppercase sm:block hidden">
         CAR RIVAS
@@ -29,14 +29,14 @@ const socialLinks = [
       {navLinks.map((link) => (
         <a
           href={link.href}
-          class="text-zinc-400 hover:text-white transition-colors text-xl lg:text-sm xl:text-base 2xl:text-xl font-bold uppercase tracking-widest border-b border-zinc-900 lg:border-none pb-2 lg:pb-0 mobile-link pointer-events-auto"
+          class="text-zinc-400 hover:text-white transition-colors text-xl lg:text-xs xl:text-sm 2xl:text-base font-bold uppercase tracking-widest border-b border-zinc-900 lg:border-none pb-2 lg:pb-0 mobile-link pointer-events-auto"
         >
           {link.name}
         </a>
       ))}
       <div class="flex items-center justify-center gap-10 lg:gap-6 mt-4 lg:mt-0 lg:absolute lg:right-6 pointer-events-auto">
         {socialLinks.map(({ href, Icon }) => (
-          <a href={href} target="_blank" class="w-10 h-10 lg:w-8 lg:h-8 2xl:w-10 2xl:h-10 hover:scale-110 transition-transform">
+          <a href={href} target="_blank" class="w-8 h-8 lg:w-6 lg:h-6 2xl:w-10 2xl:h-10 hover:scale-110 transition-transform">
             <Icon />
           </a>
         ))}
