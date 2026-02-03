@@ -1,0 +1,94 @@
+---
+// src/components/About.astro
+import { Image } from "astro:assets";
+// Importa tu imagen desde src/assets/ para que Astro pueda optimizarla
+import coachImage from "../assets/coaches/RAMON-ESTEBAN.webp";
+
+const values = [
+  "Metodología basada en ciencia del deporte",
+  "Atención personalizada 1:1 y grupos reducidos",
+  "Instalaciones de última generación",
+  "Seguimiento y evaluación constante",
+];
+---
+
+<section id="nosotros" class="py-12 lg:py-16 2xl:py-20 bg-zinc-50 overflow-hidden" aria-labelledby="about-title">
+  <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 xl:grid-cols-12 gap-12 xl:gap-20 items-center">
+      
+      <div class="relative group xl:col-span-7">
+        <div 
+          class="absolute -bottom-4 -right-3 md:-bottom-5 md:-right-4 lg:-bottom-7 lg:-right-6 2xl:-bottom-10 2xl:-right-9 w-48 h-48 bg-brand-green rounded-2xl opacity-50" 
+          aria-hidden="true"
+        ></div>
+
+        <div class="relative aspect-4/5 rounded-2xl overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+          <Image
+            src={coachImage}
+            alt="Entrenador profesional de CAR RIVAS dirigiendo una sesión"
+            class="object-cover w-full h-full"
+            width={1200}
+            height={1500}
+          />
+        </div>
+
+        <div class="absolute -top-4 -left-4 bg-white rounded-xl shadow-xl p-5 sm:p-7 border border-zinc-100">
+          <div class="text-4xl sm:text-5xl font-black text-brand-green tracking-tighter">10+</div>
+          <p class="text-xs sm:text-sm font-bold text-zinc-500 uppercase tracking-widest mt-1">
+            Años de<br/>experiencia
+          </p>
+        </div>
+      </div>
+
+      <article class="xl:col-span-5">
+        <header>
+          <span class="inline-block text-brand-green text-xs font-black uppercase mb-4 lg:mb-2 xl:mb-4">
+            Sobre Nosotros
+          </span>
+          <h2 id="about-title" class="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-black text-zinc-900 tracking-tighter mb-6 lg:mb-3 xl:mb-8 leading-[0.9] text-balance">
+            ENTRENAMIENTO QUE TRANSFORMA VIDAS
+          </h2>
+        </header>
+
+        <div class="space-y-6 lg:space-y-2 xl:space-y-6 text-zinc-600 text-base xl:text-lg 2xl:text-xl leading-relaxed font-medium">
+          <p>
+            En <strong>CAR RIVAS</strong> creemos que el entrenamiento va más allá del ejercicio físico. 
+            Nuestra filosofía se centra en el desarrollo integral del atleta, combinando 
+            la <em>ciencia del deporte</em> más avanzada con una atención totalmente personalizada.
+          </p>
+          <p>
+            Cada programa está diseñado para adaptarse a tus objetivos específicos: desde 
+            <strong>futbolistas profesionales</strong> que buscan explotar su rendimiento, hasta 
+            entusiastas de la <strong>calistenia</strong> o personas comprometidas con mejorar su 
+            salud y movilidad funcional.
+          </p>
+        </div>
+
+        <ul class="mt-10 lg:mt-5 xl:mt-10 space-y-5 lg:space-y-2 xl:space-y-5" role="list">
+          {values.map((value) => (
+            <li class="flex items-start gap-4 group">
+              <div class="shrink-0 mt-1">
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="24" height="24" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  stroke-width="3" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  class="w-5 h-5 text-brand-green transition-transform group-hover:scale-110"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+              </div>
+              <span class="text-zinc-800 font-bold text-base 2xl:text-lg tracking-tight">{value}</span>
+            </li>
+          ))}
+        </ul>
+      </article>
+      
+    </div>
+  </div>
+</section>
