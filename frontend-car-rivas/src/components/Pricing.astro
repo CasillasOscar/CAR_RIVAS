@@ -1,0 +1,100 @@
+---
+import {plans} from '../assets/data/plans_pricing.js';
+---
+
+<section id="tarifas" class="py-12 lg:py-16 2xl:py-20 bg-white" aria-labelledby="pricing-title">
+  <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-6 lg:px-8">
+    
+    <header class="text-center max-w-3xl 2xl:max-w-5xl mx-auto mb-20 2xl:mb-32">
+      <h2 id="pricing-title" class="text-brand-green text-xs 2xl:text-sm font-black uppercase mb-4">
+        Tarifas
+      </h2>
+      <p class="text-4xl md:text-5xl 2xl:text-7xl font-black text-zinc-900 tracking-tighter mb-6 2xl:mb-10">
+        PLANES TRANSPARENTES Y FLEXIBLES
+      </p>
+      <p class="text-zinc-500 text-lg 2xl:text-2xl font-medium">
+        Sin permanencia. Sin letra pequeña. Elige el plan que mejor se adapte a tus objetivos.
+      </p>
+    </header>
+
+    <div class="grid lg:grid-cols-3 gap-8 2xl:gap-16 items-stretch">
+      {plans.map((plan) => (
+        <article 
+          class={`relative flex flex-col rounded-3xl p-10 2xl:p-14 transition-all duration-500 hover:-translate-y-2 ${
+            plan.highlighted 
+              ? "bg-zinc-900 text-white shadow-2xl scale-105 z-10 border-4 border-brand-green" 
+              : "bg-zinc-50 border border-zinc-200"
+          }`}
+        >
+          {plan.highlighted && (
+            <div class="absolute -top-5 2xl:-top-6 left-1/2 -translate-x-1/2">
+              <span class="bg-brand-green text-white text-[10px] 2xl:text-sm font-black uppercase tracking-widest px-6 py-2 2xl:px-8 2xl:py-3 rounded-full shadow-lg">
+                Más popular
+              </span>
+            </div>
+          )}
+
+          <header class="mb-10 2xl:mb-14 text-center">
+            <h3 class={`text-2xl 2xl:text-4xl font-black uppercase tracking-tight mb-2 ${plan.highlighted ? "text-white" : "text-zinc-900"}`}>
+              {plan.name}
+            </h3>
+            <p class={`text-sm 2xl:text-lg font-medium leading-relaxed ${plan.highlighted ? "text-zinc-400" : "text-zinc-500"}`}>
+              {plan.description}
+            </p>
+          </header>
+
+          <div class="mb-10 2xl:mb-14 text-center">
+            <div class="flex items-center justify-center">
+              <span class="text-2xl 2xl:text-4xl font-black mt-5 mr-1">€</span>
+              <span class={`text-6xl 2xl:text-8xl font-black tracking-tighter ${plan.highlighted ? "text-brand-green" : "text-zinc-900"}`}>
+                {plan.price}
+              </span>
+              <span class={`text-sm 2xl:text-xl font-bold ml-2 uppercase tracking-widest ${plan.highlighted ? "text-zinc-500" : "text-zinc-400"}`}>
+                {plan.period}
+              </span>
+            </div>
+          </div>
+
+          <ul class="space-y-4 2xl:space-y-6 mb-10 2xl:mb-14 border-t border-zinc-200/10 pt-8 2xl:pt-10" role="list">
+            {plan.features.map((feature) => (
+              <li class="flex items-start gap-3">
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  stroke-width="3" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  class="w-5 h-5 2xl:w-7 2xl:h-7 text-brand-green shrink-0"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span class={`text-sm 2xl:text-lg font-bold tracking-tight ${plan.highlighted ? "text-zinc-300" : "text-zinc-600"}`}>
+                  {feature}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <a 
+            href="#contacto" 
+            class={`block w-full text-center py-5 2xl:py-7 rounded-xl text-xs 2xl:text-base font-black uppercase tracking-[0.2em] transition-all mt-auto ${
+              plan.highlighted 
+                ? "bg-brand-green text-white hover:bg-white hover:text-zinc-900" 
+                : "bg-zinc-900 text-white hover:bg-brand-green"
+            }`}
+          >
+            Empezar ahora
+          </a>
+        </article>
+      ))}
+    </div>
+
+    <footer class="mt-16 2xl:mt-24 text-center">
+      <p class="text-zinc-400 text-sm 2xl:text-lg font-bold uppercase">
+        ¿Tienes dudas? <a href="#contacto" class="text-brand-green hover:underline">Contacta con nosotros</a> para una consulta gratuita.
+      </p>
+    </footer>
+  </div>
+</section>
