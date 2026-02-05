@@ -20,23 +20,20 @@ const socialLinks = [
       >
        <img src={logo.src} alt="Logo CAR RIVAS" class="w-6 h-6 sm:w-8 sm:h-8 lg:w-8 lg:h-8 2xl:w-14 2xl:h-14"/>
       </div>
-      <!-- <span class="text-white font-black text-xl 2xl:text-2xl uppercase sm:block hidden">
-        CAR RIVAS
-      </span> -->
     </a>
 
-    <nav id="main-nav" class="hidden lg:flex flex-col items-center lg:flex-row absolute lg:absolute top-16 sm:top-20 lg:top-0 left-0 lg:left-0 w-full lg:w-full bg-black lg:bg-transparent border-t border-zinc-900 lg:border-none p-6 sm:p-8 lg:p-0 gap-4 sm:gap-6 lg:gap-6 xl:gap-10 2xl:gap-16 shadow-2xl lg:shadow-none z-40 lg:h-full lg:justify-center lg:pointer-events-none">
+    <nav id="main-nav" class="hidden lg:flex flex-col items-center lg:flex-row absolute lg:absolute top-16 sm:top-20 lg:top-0 left-0 lg:left-0 w-full lg:w-full bg-black lg:bg-transparent border-t border-zinc-900 lg:border-none p-4 lg:p-0 gap-3 lg:gap-6 xl:gap-10 2xl:gap-16 shadow-2xl lg:shadow-none z-40 lg:h-full lg:justify-center lg:pointer-events-none">
       {navLinks.map((link) => (
         <a
           href={link.href}
-          class="text-zinc-400 hover:text-white transition-colors text-lg sm:text-xl lg:text-xs xl:text-sm 2xl:text-base font-bold uppercase tracking-widest border-b border-zinc-900 lg:border-none pb-2 lg:pb-0 mobile-link pointer-events-auto"
+          class="text-zinc-400 hover:text-white transition-colors text-sm sm:text-lg lg:text-xs xl:text-sm 2xl:text-base font-bold uppercase tracking-widest border-b border-zinc-900 lg:border-none lg:pb-0 mobile-link pointer-events-auto"
         >
           {link.name}
         </a>
       ))}
-      <div class="flex items-center justify-center gap-6 sm:gap-10 lg:gap-6 mt-4 lg:mt-0 lg:absolute lg:right-6 pointer-events-auto">
+      <div class="flex items-center justify-center gap-6 sm:gap-10 lg:gap-6 mt-0 lg:mt-0 lg:absolute lg:right-6 pointer-events-auto">
         {socialLinks.map(({ href, Icon }) => (
-          <a href={href} target="_blank" class="w-8 h-8 lg:w-6 lg:h-6 2xl:w-10 2xl:h-10 hover:scale-110 transition-transform">
+          <a href={href} target="_blank" class="w-5 h-5 sm:w-8 sm:h-8 lg:w-6 lg:h-6 2xl:w-10 2xl:h-10 hover:scale-110 transition-transform">
             <Icon />
           </a>
         ))}
@@ -57,10 +54,17 @@ const socialLinks = [
   const mobileLinks = document.querySelectorAll('.mobile-link');
 
   function toggleMenu() {
-    menu?.classList.toggle('hidden');
-    menu?.classList.toggle('flex');
-    menuIcon?.classList.toggle('hidden');
-    closeIcon?.classList.toggle('hidden');
+    if (menu?.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+      menu.classList.add('flex');
+      menuIcon?.classList.add('hidden');
+      closeIcon?.classList.remove('hidden');
+    } else {
+      menu?.classList.add('hidden');
+      menu?.classList.remove('flex');
+      menuIcon?.classList.remove('hidden');
+      closeIcon?.classList.add('hidden');
+    }
   }
 
   btn?.addEventListener('click', toggleMenu);
