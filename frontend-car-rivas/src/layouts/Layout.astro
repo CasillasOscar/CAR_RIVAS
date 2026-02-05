@@ -3,6 +3,7 @@ import "../styles/global.css";
 import logo from "../assets/logo-grey.png";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { schema } from "../assets/data/schema_ld.js";
 ---
 
 <!doctype html>
@@ -17,6 +18,7 @@ import Footer from "../components/Footer.astro";
       name="description"
       content="Centro de alto rendimiento deportivo en Rivas Vaciamadrid para futbolistas. Entrenamiento funcional y de calistenia."
     />
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   </head>
   <body>
     <Header />
@@ -43,7 +45,7 @@ import Footer from "../components/Footer.astro";
     width: 100%;
     margin: 0;
     padding: 0;
-	font-family: var(--font-sans);
+    font-family: var(--font-sans);
   }
 
   @media (prefers-reduced-motion: reduce) {

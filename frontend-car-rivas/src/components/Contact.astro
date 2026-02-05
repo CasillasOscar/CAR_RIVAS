@@ -1,0 +1,74 @@
+---
+import { contactInfo } from "../assets/data/contactInfo.js";
+import { schedules } from "../assets/data/schedules.js";
+
+
+---
+
+<section id="ubicacion" class="py-12 lg:py-16 2xl:py-20 bg-zinc-100" aria-labelledby="location-title">
+  <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-6">
+    
+    <div class="text-center mb-20">
+      <h2 id="location-title" class="text-brand-green text-xs font-black uppercase mb-4">
+        Ubicación y Horarios
+      </h2>
+      <p class="text-4xl md:text-5xl 2xl:text-6xl font-black text-zinc-900 tracking-tighter[1] uppercase mb-6">
+        Te esperamos en el centro
+      </p>
+      <p class="max-w-2xl mx-auto text-zinc-500 text-lg 2xl:text-xl font-medium">
+        Entrena en las mejores instalaciones de Rivas. Fácil acceso y aparcamiento gratuito para socios.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <div class="relative aspect-square lg:aspect-auto lg:h-full min-h-112.5 rounded-3xl overflow-hidden shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.42!2d-3.535!3d40.347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDIwJzQ5LjIiTiAzwrAzMicwNi4wIlc!5e0!3m2!1ses!2ses!4v1620000000000!5m2!1ses!2ses" 
+          class="absolute inset-0 w-full h-full border-0" 
+          allowfullscreen="" 
+          loading="lazy" 
+          title="Mapa de ubicación de CAR RIVAS">
+        </iframe>
+      </div>
+
+      <div class="space-y-8">
+        <article class="bg-white rounded-3xl border border-zinc-200 p-8 shadow-sm">
+          <div class="flex items-center gap-4 mb-8">
+            <div class="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="text-xl font-black uppercase tracking-tight text-zinc-900">Horarios de Apertura</h3>
+          </div>
+          
+          <div class="space-y-4">
+            {schedules.map((item) => (
+              <div class="flex items-center justify-between py-4 border-b border-zinc-100 last:border-0 last:pb-0 group">
+                <span class="text-zinc-500 font-bold uppercase text-xs 2xl:text-sm tracking-widest">{item.day}</span>
+                <span class="text-zinc-900 font-black tracking-tight 2xl:text-lg">{item.hours}</span>
+              </div>
+            ))}
+          </div>
+        </article>
+
+        <article class="bg-zinc-900 rounded-3xl p-8 shadow-xl">
+          <h3 class="text-xl font-black uppercase tracking-tight text-white mb-8">Información de Contacto</h3>
+          <div class="grid gap-4">
+            {contactInfo.map((info) => (
+              <a 
+                href={info.href} 
+                target={info.label === "Dirección" ? "_blank" : "_self"}
+                class="flex items-center gap-5 p-4 rounded-2xl hover:bg-zinc-800 transition-all group"
+              >
+                <div class="w-12 h-12 rounded-xl bg-brand-green flex items-center justify-center text-white transition-transform group-hover:scale-110" set:html={info.icon} />
+                <div>
+                  <p class="text-[10px] 2xl:text-xs text-zinc-500 font-black uppercase tracking-[0.2em]">{info.label}</p>
+                  <p class="text-white font-bold tracking-tight group-hover:text-brand-green transition-colors 2xl:text-lg">{info.value}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
