@@ -8,23 +8,23 @@ import WhatsApp from "../assets/icons/WhatsApp.astro";
 
 <footer id="contacto" class="bg-black text-white w-full">
   <div class="border-b border-white/10">
-    <div class="max-w-350 mx-auto px-6 py-16">
+    <div class="max-w-350 mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16">
       <div
         class="flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left"
       >
         <div>
-          <h2 class="text-3xl lg:text-4xl font-black mb-2 tracking-tight">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black mb-2 tracking-tight">
             ¿Listo para empezar?
           </h2>
-          <p class="text-zinc-400 text-lg">
+          <p class="text-zinc-400 text-sm sm:text-base lg:text-lg">
             Contáctanos hoy y agenda tu primera sesión.
           </p>
         </div>
-        <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
           <a
             href="https://wa.me/34600000000"
             target="_blank"
-            class="bg-brand-green hover:brightness-110 text-white rounded-xl px-8 py-4 flex items-center justify-center gap-3 font-bold transition-all"
+            class="bg-brand-green hover:brightness-110 text-white rounded-xl px-6 py-3 sm:px-8 sm:py-4 flex items-center justify-center gap-2 sm:gap-3 font-bold transition-all text-sm sm:text-base"
           >
             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
               <path
@@ -35,7 +35,7 @@ import WhatsApp from "../assets/icons/WhatsApp.astro";
           </a>
           <a
             href="tel:+34600000000"
-            class="border border-white/20 hover:bg-white/5 text-white rounded-xl px-8 py-4 flex items-center justify-center gap-3 font-bold transition-all"
+            class="border border-white/20 hover:bg-white/5 text-white rounded-xl px-6 py-3 sm:px-8 sm:py-4 flex items-center justify-center gap-2 sm:gap-3 font-bold transition-all text-sm sm:text-base"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -59,9 +59,9 @@ import WhatsApp from "../assets/icons/WhatsApp.astro";
     </div>
   </div>
 
-  <div class="max-w-350 mx-auto px-6 py-16">
+  <div class="max-w-350 mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16">
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-left"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 text-left"
     >
       <div class="col-span-1">
         <div class="flex items-center gap-3 mb-6">
@@ -163,12 +163,12 @@ import WhatsApp from "../assets/icons/WhatsApp.astro";
 
   <div class="border-t border-white/5 bg-zinc-950/50">
     <div
-      class="max-w-350 mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4"
+      class="max-w-350 mx-auto px-4 sm:px-6 py-6 sm:py-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left"
     >
       <p class="text-zinc-500 text-xs">
         © {new Date().getFullYear()} CAR Rivas. Todos los derechos reservados.
       </p>
-      <div class="flex gap-8">
+      <div class="flex flex-wrap justify-center gap-4 sm:gap-8">
         <a
           href="#"
           class="text-zinc-500 hover:text-white text-xs transition-colors"
