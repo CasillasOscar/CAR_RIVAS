@@ -26,12 +26,12 @@ const socialLinks = [
       {navLinks.map((link) => (
         <a
           href={link.href}
-          class="text-zinc-400 hover:text-white transition-colors text-sm sm:text-lg lg:text-xs xl:text-sm 2xl:text-base font-bold uppercase tracking-widest border-b border-zinc-900 lg:border-none lg:pb-0 mobile-link pointer-events-auto"
+          class="text-zinc-400 hover:text-white transition-colors text-sm sm:text-lg lg:text-lg xl:text-sm 2xl:text-base font-bold uppercase tracking-widest border-b border-zinc-900 lg:border-none lg:pb-0 mobile-link pointer-events-auto"
         >
           {link.name}
         </a>
       ))}
-      <div class="flex items-center justify-center gap-6 sm:gap-10 lg:gap-6 mt-0 lg:mt-0 lg:absolute lg:right-6 pointer-events-auto">
+      <div class="flex items-center justify-center gap-6 sm:gap-10 lg:gap-6 mt-1 lg:mt-0 lg:absolute lg:right-6 pointer-events-auto">
         {socialLinks.map(({ href, Icon }) => (
           <a href={href} target="_blank" class="w-5 h-5 sm:w-8 sm:h-8 lg:w-6 lg:h-6 2xl:w-10 2xl:h-10 hover:scale-110 transition-transform">
             <Icon />
