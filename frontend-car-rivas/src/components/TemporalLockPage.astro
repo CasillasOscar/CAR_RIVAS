@@ -1,0 +1,87 @@
+---
+const { logo, ACCESS_PASSWORD } = Astro.props;
+---
+
+<div id="auth-barrier">
+  <div class="auth-card">
+    <img src={logo.src} alt="Logo CAR RIVAS" class="w-24 mx-auto mb-6 opacity-90" />
+    <h2 class="text-2xl font-black uppercase tracking-tighter mb-2 italic text-white">Área Reservada</h2>
+    <p class="text-zinc-400 text-sm mb-6">Introduce la clave de acceso para ver el proyecto.</p>
+    
+    <div class="space-y-4">
+      <input 
+        type="password" 
+        id="password-input" 
+        placeholder="••••••••" 
+        class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 outline-none focus:border-(--brand-green) transition-colors text-center font-mono text-white"
+      />
+      <button 
+        id="unlock-button"
+        class="w-full bg-(--brand-green) hover:bg-(--brand-green-dark) text-zinc-950 font-black py-3 rounded-lg uppercase tracking-widest transition-all active:scale-95"
+      >
+        DESBLOQUEAR
+      </button>
+      <p id="error-message" class="text-red-500 text-xs font-bold uppercase hidden">Contraseña incorrecta</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  #auth-barrier {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background-color: #09090b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .auth-card {
+    background: #18181b;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid #27272a;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+  }
+</style>
+
+<script define:vars={{ ACCESS_PASSWORD }}>
+  const barrier = document.getElementById('auth-barrier');
+  const content = document.getElementById('main-content');
+  const input = document.getElementById('password-input');
+  const btn = document.getElementById('unlock-button');
+  const error = document.getElementById('error-message');
+
+  function showContent() {
+    if (barrier) barrier.style.display = 'none';
+    if (content) content.style.display = 'block';
+    // Forzamos un pequeño scroll al top por si acaso
+    window.scrollTo(0, 0);
+  }
+
+  // Verificar sesión existente
+  if (sessionStorage.getItem('car_rivas_auth') === 'granted') {
+    showContent();
+  }
+
+  function handleUnlock() {
+    if (input.value === ACCESS_PASSWORD) {
+      sessionStorage.setItem('car_rivas_auth', 'granted');
+      showContent();
+    } else {
+      error.classList.remove('hidden');
+      input.classList.add('border-red-500');
+      input.value = '';
+      input.focus();
+    }
+  }
+
+  btn.addEventListener('click', handleUnlock);
+  input.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') handleUnlock();
+  });
+</script>

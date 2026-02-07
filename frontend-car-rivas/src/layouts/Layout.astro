@@ -4,6 +4,8 @@ import logo from "../assets/logo-grey.png";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { schema } from "../assets/data/schema_ld.js";
+import TemporalLockPage from "../components/TemporalLockPage.astro";
+const ACCESS_PASSWORD = "sadas*ofn@je432nowd213*sadsad";
 ---
 
 <!doctype html>
@@ -21,11 +23,16 @@ import { schema } from "../assets/data/schema_ld.js";
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   </head>
   <body>
-    <Header />
-    <main class="flex-1 w-full">
-      <slot />
-    </main>
-    <Footer />
+    <!--Modificar temporal lock -->
+    <TemporalLockPage logo={logo} ACCESS_PASSWORD={ACCESS_PASSWORD} />
+    <!--Modificar temporal lock div-->
+    <div id="main-content" class="w-full flex flex-col min-h-screen">
+      <Header />
+      <main class="flex-1 w-full">
+        <slot />
+      </main>
+      <Footer />
+    </div>
   </body>
 </html>
 
