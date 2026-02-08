@@ -1,6 +1,7 @@
 ---
 import { services } from "../assets/data/services.js";
 import { navLinks } from "../assets/data/navigation.js";
+const { URL_MAIN } = Astro.props;
 import logo from "../assets/logo-black.png";
 import Instagram from "../assets/icons/Instagram.astro";
 import WhatsApp from "../assets/icons/WhatsApp.astro";
@@ -106,7 +107,7 @@ import WhatsApp from "../assets/icons/WhatsApp.astro";
             navLinks.map((link) => (
               <li>
                 <a
-                  href={link.href}
+                  href={URL_MAIN + link.href}
                   class="text-zinc-400 hover:text-brand-green text-sm transition-colors"
                 >
                   {link.name}
@@ -128,7 +129,7 @@ import WhatsApp from "../assets/icons/WhatsApp.astro";
             services.map((service) => (
               <li>
                 <a
-                  href={service.href}
+                  href={URL_MAIN + service.href}
                   class="text-zinc-400 hover:text-brand-green text-sm transition-colors"
                 >
                   {service.label}

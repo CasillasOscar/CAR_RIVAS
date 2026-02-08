@@ -11,7 +11,7 @@ export const services = [
       "Análisis biomecánico",
     ],
     colorClass: "bg-brand-green",
-    href: "/futbolistas",
+    href: "CAR_RIVAS/football",
   },
   {
     title: "Calistenia",
