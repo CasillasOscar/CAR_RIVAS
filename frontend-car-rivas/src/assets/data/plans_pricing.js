@@ -28,7 +28,7 @@ export const plans = [
     highlighted: true,
   },
   {
-    name: "Elite",
+    name: "Élite",
     price: "159",
     period: "/mes",
     description: "Para atletas de alto rendimiento",

@@ -6,7 +6,7 @@ import Footer from "../components/Footer.astro";
 import { schema } from "../assets/data/schema_ld.js";
 import TemporalLockPage from "../components/TemporalLockPage.astro";
 const ACCESS_PASSWORD = "sadas*ofn@je432nowd213*sadsad";
-const URL_MAIN = "/CAR_RIVAS";
+const URL_MAIN = import.meta.env.PUBLIC_BASE_URL;
 ---
 
 <!doctype html>
@@ -28,11 +28,11 @@ const URL_MAIN = "/CAR_RIVAS";
     <TemporalLockPage logo={logo} ACCESS_PASSWORD={ACCESS_PASSWORD} />
     <!--Modificar temporal lock div-->
     <div id="main-content" class="w-full flex flex-col min-h-screen">
-      <Header URL_MAIN={URL_MAIN} />
+      <Header />
       <main class="flex-1 w-full">
         <slot />
       </main>
-      <Footer URL_MAIN={URL_MAIN}/>
+      <Footer />
     </div>
   </body>
 </html>
