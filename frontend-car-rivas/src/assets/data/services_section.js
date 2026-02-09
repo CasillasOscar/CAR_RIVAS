@@ -39,6 +39,6 @@ export const services = [
       "Energía diaria",
     ],
     colorClass: "bg-brand-green",
-    href: "#",
+    href: "functional",
   },
 ];
