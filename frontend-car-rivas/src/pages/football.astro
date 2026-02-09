@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import heroImg from "../assets/facilities/IMG_6794.webp";
 import { footballBenefits, footballFeatures, footballCoaches } from '../assets/data/football_page.js';
-const URL_MAIN = import.meta.env.PUBLIC_BASE_URL;
+const URL_MAIN = import.meta.env.BASE_URL;
 ---
 
 <Layout>
@@ -43,7 +43,7 @@ const URL_MAIN = import.meta.env.PUBLIC_BASE_URL;
           </p>
 
           <div class="flex flex-wrap gap-3 sm:gap-4">
-            <a href={URL_MAIN + "#contact-form"} class="bg-brand-green hover:bg-brand-green-dark text-zinc-950 font-black px-5 py-3 sm:px-8 sm:py-4 rounded-md flex items-center gap-2 transition-all active:scale-95 shadow-lg shadow-green-900/20 text-sm sm:text-base">
+            <a href={URL_MAIN + "/#contact-form"} class="bg-brand-green hover:bg-brand-green-dark text-zinc-950 font-black px-5 py-3 sm:px-8 sm:py-4 rounded-md flex items-center gap-2 transition-all active:scale-95 shadow-lg shadow-green-900/20 text-sm sm:text-base">
               RESERVAR EVALUACIÓN
             </a>
           </div>
