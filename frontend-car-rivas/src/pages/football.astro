@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import heroImg from "../assets/facilities/IMG_6794.webp";
 import { footballBenefits, footballFeatures, footballCoaches } from '../assets/data/football_page.js';
-const URL_MAIN = "/CAR_RIVAS";
+const URL_MAIN = import.meta.env.PUBLIC_BASE_URL;
 ---
 
 <Layout>
