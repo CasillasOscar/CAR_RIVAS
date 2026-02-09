@@ -129,7 +129,7 @@ const URL_MAIN = import.meta.env.BASE_URL;
             services.map((service) => (
               <li>
                 <a
-                  href={URL_MAIN + service.href}
+                  href={`${URL_MAIN}/${service.href}`.replace(/\/+/g, '/')}
                   class="text-zinc-400 hover:text-brand-green text-sm transition-colors"
                 >
                   {service.label}
