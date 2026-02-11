@@ -7,77 +7,85 @@ const URL_MAIN = import.meta.env.BASE_URL;
 
 <Layout>
   <section
-    class="bg-zinc-950 pt-24 pb-12 lg:pt-32 lg:pb-20 2xl:pt-48 2xl:pb-32 relative overflow-hidden"
+    class="relative min-h-[80vh] lg:min-h-[90vh] flex items-center overflow-hidden bg-zinc-950"
+    aria-labelledby="hero-title"
   >
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <nav class="mb-6 sm:mb-8" aria-label="Breadcrumb">
-        <a
-          href={URL_MAIN}
-          class="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors group"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="transition-transform group-hover:-translate-x-1"
-            ><line x1="19" y1="12" x2="5" y2="12"></line><polyline
-              points="12 19 5 12 12 5"></polyline></svg
-          >
-          <span class="text-sm">Volver al inicio</span>
-        </a>
-      </nav>
-
-      <header class="flex items-center gap-4 mb-6">
-        <div
-          class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-brand-green flex items-center justify-center shadow-[0_0_20px_rgba(var(--brand-green-rgb),0.3)]"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="black"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="sm:w-6 sm:h-6"
-            ><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle
-              cx="9"
-              cy="7"
-              r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path
-              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
-          >
-        </div>
-        <span
-          class="text-brand-green font-bold uppercase tracking-widest text-xs sm:text-sm"
-          >Staff Técnico Especializado</span
-        >
-      </header>
-
-      <h1
-        class="text-3xl sm:text-5xl lg:text-7xl 2xl:text-8xl font-black text-white tracking-tighter mb-6 sm:mb-8 uppercase italic text-balance"
+    <div class="absolute inset-0 z-0">
+      <div
+        class="absolute inset-0 bg-linear-to-r from-zinc-950 via-zinc-950/80 to-transparent"
       >
-        Profesionales de <span class="text-brand-green">élite</span>
-      </h1>
-      <p
-        class="text-base sm:text-lg lg:text-xl text-zinc-300 leading-relaxed mb-6 max-w-2xl"
-      >
-        Aquí presentamos a nuestro equipo, cada uno con una trayectoria
-        destacada en el ámbito del alto rendimiento deportivo. Su experiencia y
-        conocimientos especializados garantizan un entrenamiento de calidad y
-        resultados excepcionales para nuestros deportistas.
-      </p>
+      </div>
     </div>
+
     <div
-      class="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-96 h-96 bg-brand-green/10 blur-[120px] rounded-full"
+      class="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 w-full"
     >
+      <div class="max-w-xl lg:max-w-3xl">
+        <nav class="mb-6 sm:mb-8" aria-label="Breadcrumb">
+          <a
+            href={URL_MAIN}
+            class="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors group"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="transition-transform group-hover:-translate-x-1"
+              ><line x1="19" y1="12" x2="5" y2="12"></line><polyline
+                points="12 19 5 12 12 5"></polyline></svg
+            >
+            <span class="text-sm">Volver al inicio</span>
+          </a>
+        </nav>
+
+        <header class="flex items-center gap-4 mb-5 sm:mb-6">
+          <div
+            class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-brand-green flex items-center justify-center shadow-[0_0_20px_rgba(var(--brand-green-rgb),0.3)]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="sm:w-6 sm:h-6"
+              ><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+              ></path><circle cx="9" cy="7" r="4"></circle><path
+                d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path
+                d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+            >
+          </div>
+          <span
+            class="text-brand-green font-bold uppercase tracking-widest text-xs sm:text-sm"
+            >Staff Técnico Especializado</span
+          >
+        </header>
+
+        <h1
+          id="hero-title"
+          class="text-3xl sm:text-5xl lg:text-7xl 2xl:text-8xl font-black text-white tracking-tighter mb-6 sm:mb-8 uppercase italic text-balance"
+        >
+          Profesionales de <span class="text-brand-green">élite</span>
+        </h1>
+
+        <p
+          class="text-base sm:text-lg lg:text-xl text-zinc-300 leading-relaxed mb-8 sm:mb-10 max-w-2xl"
+        >
+          Nuestra experiencia y conocimientos especializados garantizan un
+          entrenamiento de calidad y resultados excepcionales para nuestros
+          deportistas.
+        </p>
+      </div>
     </div>
   </section>
 
