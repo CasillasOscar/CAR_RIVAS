@@ -17,7 +17,7 @@ export const schema = {
     "longitude": -3.535
   },
   "url": "https://carrivas.es",
-  "telephone": "+34600000000",
+  "telephone": "+34654125442",
   "openingHoursSpecification": [
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "06:00", "closes": "22:00" },
     { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "20:00" },
