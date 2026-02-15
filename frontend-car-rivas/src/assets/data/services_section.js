@@ -11,7 +11,21 @@ export const services = [
       "Análisis biomecánico",
     ],
     colorClass: "bg-brand-green",
-    href: "football",
+    href: "futbolistas",
+  },
+  {
+    title: "Readaptación de Lesiones",
+    subtitle: "Readaptación",
+    description:
+      "Servicio especializado en planificación, control de cargas y readaptación de lesiones de la mano de Iván Díaz Infantes.",
+    features: [
+      "Control de cargas",
+      "Readaptación de lesiones",
+      "Prevención de recaídas",
+      "Rehabilitación funcional",
+    ],
+    colorClass: "bg-zinc-900",
+    href: "readaptacion",
   },
   {
     title: "Calistenia",
@@ -24,7 +38,7 @@ export const services = [
       "Skills progresivas",
       "Flexibilidad activa",
     ],
-    colorClass: "bg-zinc-900",
+    colorClass: "bg-brand-green",
     href: "#",
   },
   {
@@ -38,7 +52,7 @@ export const services = [
       "Movilidad articular",
       "Energía diaria",
     ],
-    colorClass: "bg-brand-green",
-    href: "functional",
+    colorClass: "bg-zinc-900",
+    href: "funcional",
   },
 ];

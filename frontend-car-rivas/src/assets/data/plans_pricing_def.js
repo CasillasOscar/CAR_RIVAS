@@ -39,5 +39,24 @@ export const pricingData = {
       { name: "Bono 4 sesiones", price: "110", unit: "persona", highlighted: true },
       { name: "Bono 10 sesiones", price: "270", unit: "persona" },
     ]
+  },
+  futbolistas: {
+    title: "Entrenamiento Futbolistas",
+    subtitle: "Alto Rendimiento · Grupos reducidos",
+    includes: [
+      "Entrenamiento específico para futbolistas",
+      "Grupos reducidos (max. 10 personas)",
+      "Seguimiento por preparadores físicos titulados",
+      "Optimización de la condición atlética",
+    ],
+    plans: [
+      // Planes Mensuales (Grupales)
+      { name: "Standard", sessions: "1 sesión / semana", price: "80", unit: "mes", highlighted: false },
+      { name: "Pro", sessions: "2 sesiones / semana", price: "140", unit: "mes", highlighted: true },
+      
+      // Planes Individuales
+      { name: "Sesión Individual", sessions: "Clase suelta", price: "50", unit: "sesión", highlighted: false },
+      { name: "Bono Individual", sessions: "Bono 4 sesiones", price: "180", unit: "bono", highlighted: true },
+    ]
   }
 };

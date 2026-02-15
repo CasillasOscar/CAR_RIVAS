@@ -1,4 +1,4 @@
-import coach1 from "../coaches/RAUL-DURÁN.webp";
+import coach1 from "../coaches/RAUL-DURAN.webp";
 import coach2 from "../coaches/IVAN-REPISO.webp";
 import coach3 from "../coaches/JORGE-ESTEBARANZ.webp";
 import coach4 from "../coaches/ALVARO-MORENO.webp";
