@@ -1,25 +1,26 @@
-import coach1 from "../coaches/RAUL-DURÁN.webp";
+import coach1 from "../coaches/RAUL-DURAN.webp";
 import coach2 from "../coaches/IVAN-REPISO.webp";
 import coach3 from "../coaches/JORGE-ESTEBARANZ.webp";
 import coach4 from "../coaches/ALVARO-MORENO.webp";
 import coach5 from "../coaches/CARLOS-JAVIER-MARTIN.webp";
 import coach6 from "../coaches/RAMON-ESTEBAN.webp";
 import coach7 from "../coaches/IVAN-DIAZ-INFANTES.webp";
+import ceo from "../coaches/DAVID-CRESPO.webp";
 
 export const trainers = [
-//   {
-//     id: "david-crespo",
-//     name: "David Crespo",
-//     role: "Entrenador y Analista Profesional",
-//     specialization: "Análisis Táctico y Mejora Individual",
-//     description: "Con más de 15 años en entornos profesionales y de alto rendimiento, ha desarrollado su trayectoria en clubes de élite por todo el mundo. Especialista en el desarrollo de planes específicos para la mejora individual del futbolista.",
-//     image: "/images/team/david-crespo.webp",
-//     credentials: [
-//       "Licencia UEFA",
-//       "Analista Profesional de Fútbol",
-//       "Especialista en Alto Rendimiento Internacional"
-//     ]
-//   },
+  {
+    id: "david-crespo",
+    name: "David Crespo",
+    role: "Entrenador y Analista Profesional",
+    specialization: "Análisis Táctico y Mejora Individual",
+    description: "Con más de 15 años en entornos profesionales y de alto rendimiento, ha desarrollado su trayectoria en clubes de élite por todo el mundo. Especialista en el desarrollo de planes específicos para la mejora individual del futbolista.",
+    image: ceo,
+    credentials: [
+      "Licencia UEFA",
+      "Analista Profesional de Fútbol",
+      "Especialista en Alto Rendimiento Internacional"
+    ]
+  },
   {
     id: "raul-duran",
     name: "Raúl Durán",
@@ -90,7 +91,7 @@ export const trainers = [
     name: "Ramón Esteban",
     role: "Entrenador de Porteros",
     specialization: "Alto Rendimiento en Competición",
-    description: "Preparador de porteros del Primer Equipo de la AD Alcorcón (1º RFEF). Especializado en la toma de decisiones bajo presión y la preparación específica para contextos de máxima exigencia.",
+    description: "Preparador de porteros del AD Alcorcón (Juvenil 'A' - Liga Nacional). Especializado en la toma de decisiones bajo presión y la preparación específica para contextos de máxima exigencia.",
     image: coach6,
     credentials: [
       "Licencia UEFA",
@@ -103,7 +104,7 @@ export const trainers = [
     name: "Iván Díaz Infantes",
     role: "Preparador Físico de Élite",
     specialization: "Planificación y Readaptación",
-    description: "Integrante del staff de Diego Pablo Simeone en el Atlético de Madrid. Especializado en planificación, control de cargas y readaptación de lesiones en contextos competitivos de máxima exigencia mundial.",
+    description: "Ex-integrante del staff de Diego Pablo Simeone en el Atlético de Madrid. Especializado en planificación, control de cargas y readaptación de lesiones en contextos competitivos de máxima exigencia mundial.",
     image: coach7,
     credentials: [
       "Grado en Ciencias de la Actividad Física y del Deporte",
