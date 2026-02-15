@@ -40,7 +40,7 @@ export const readaptacionCoaches = [
     name: "Iván Díaz Infantes",
     role: "Preparador Físico de Élite",
     specialization: "Planificación y Readaptación",
-    description: "Integrante del staff de Diego Pablo Simeone en el Atlético de Madrid. Especializado en planificación, control de cargas y readaptación de lesiones en contextos competitivos de máxima exigencia mundial.",
+    description: "Ex-integrante del staff de Diego Pablo Simeone en el Atlético de Madrid. Especializado en planificación, control de cargas y readaptación de lesiones en contextos competitivos de máxima exigencia mundial.",
     image: coach7,
     credentials: [
       "Grado en Ciencias de la Actividad Física y del Deporte",
