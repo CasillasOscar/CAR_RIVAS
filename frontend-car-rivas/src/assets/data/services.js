@@ -1,5 +1,6 @@
 export const services = [
-  { href: "/football", label: "Entrenamiento Futbolistas" },
+  { href: "/futbolistas", label: "Entrenamiento Futbolistas" },
   { href: "/#", label: "Calistenia" },
-  { href: "/functional", label: "Entrenamiento Funcional" },
+  { href: "/funcional", label: "Entrenamiento Funcional" },
+  { href: "/readaptacion", label: "Readaptación de Lesiones" },
 ];

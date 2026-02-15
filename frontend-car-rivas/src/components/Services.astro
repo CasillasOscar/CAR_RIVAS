@@ -3,10 +3,12 @@ import { services } from '../assets/data/services_section.js';
 import Calisthenics from '../assets/icons/Calisthenics.astro';
 import Football from '../assets/icons/Football.astro';
 import Functional from '../assets/icons/Functional.astro';
+import Lesiones from '../assets/icons/Lesiones.astro';
 
 
 const iconMap: Record<string, any> = {
   "Futbolistas": Football,
+  "Readaptación de Lesiones": Lesiones,
   "Calistenia": Calisthenics,
   "Funcional": Functional,
 };
@@ -27,7 +29,7 @@ const iconMap: Record<string, any> = {
       </p>
     </header>
 
-    <div class="grid lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6 2xl:gap-8">
+    <div class="grid sm:grid-cols-2 2xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 2xl:gap-8">
       {services.map((service, index) => {
         const Icon = iconMap[service.title];
         return (
